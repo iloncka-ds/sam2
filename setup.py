@@ -8,7 +8,7 @@ import os
 from setuptools import find_packages, setup
 
 # Package metadata
-NAME = "SAM-2"
+NAME = "SAM2"
 VERSION = "1.0"
 DESCRIPTION = "SAM 2: Segment Anything in Images and Videos"
 URL = "https://github.com/facebookresearch/sam2"
@@ -31,38 +31,38 @@ REQUIRED_PACKAGES = [
     "pillow>=9.4.0",
 ]
 
-EXTRA_PACKAGES = {
-    "notebooks": [
-        "matplotlib>=3.9.1",
-        "jupyter>=1.0.0",
-        "opencv-python>=4.7.0",
-        "eva-decord>=0.6.1",
-    ],
-    "interactive-demo": [
-        "Flask>=3.0.3",
-        "Flask-Cors>=5.0.0",
-        "av>=13.0.0",
-        "dataclasses-json>=0.6.7",
-        "eva-decord>=0.6.1",
-        "gunicorn>=23.0.0",
-        "imagesize>=1.4.1",
-        "pycocotools>=2.0.8",
-        "strawberry-graphql>=0.243.0",
-    ],
-    "dev": [
-        "black==24.2.0",
-        "usort==1.0.2",
-        "ufmt==2.0.0b2",
-        "fvcore>=0.1.5.post20221221",
-        "pandas>=2.2.2",
-        "scikit-image>=0.24.0",
-        "tensorboard>=2.17.0",
-        "pycocotools>=2.0.8",
-        "tensordict>=0.5.0",
-        "opencv-python>=4.7.0",
-        "submitit>=1.5.1",
-    ],
-}
+# EXTRA_PACKAGES = {
+#     "notebooks": [
+#         "matplotlib>=3.9.1",
+#         "jupyter>=1.0.0",
+#         "opencv-python>=4.7.0",
+#         "eva-decord>=0.6.1",
+#     ],
+#     "interactive-demo": [
+#         "Flask>=3.0.3",
+#         "Flask-Cors>=5.0.0",
+#         "av>=13.0.0",
+#         "dataclasses-json>=0.6.7",
+#         "eva-decord>=0.6.1",
+#         "gunicorn>=23.0.0",
+#         "imagesize>=1.4.1",
+#         "pycocotools>=2.0.8",
+#         "strawberry-graphql>=0.243.0",
+#     ],
+#     "dev": [
+#         "black==24.2.0",
+#         "usort==1.0.2",
+#         "ufmt==2.0.0b2",
+#         "fvcore>=0.1.5.post20221221",
+#         "pandas>=2.2.2",
+#         "scikit-image>=0.24.0",
+#         "tensorboard>=2.17.0",
+#         "pycocotools>=2.0.8",
+#         "tensordict>=0.5.0",
+#         "opencv-python>=4.7.0",
+#         "submitit>=1.5.1",
+#     ],
+# }
 
 # By default, we also build the SAM 2 CUDA extension.
 # You may turn off CUDA build with `export SAM2_BUILD_CUDA=0`.
@@ -164,10 +164,10 @@ setup(
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     license=LICENSE,
-    packages=find_packages(exclude="notebooks"),
+    packages=find_packages(),
     include_package_data=True,
     install_requires=REQUIRED_PACKAGES,
-    extras_require=EXTRA_PACKAGES,
+    extras_require=[],
     python_requires=">=3.10.0",
     ext_modules=get_extensions(),
     cmdclass=cmdclass,
