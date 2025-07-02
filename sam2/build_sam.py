@@ -65,6 +65,10 @@ HF_MODEL_ID_TO_FILENAMES = {
         "configs/sam2.1/sam2.1_hiera_l.yaml",
         "sam2.1_hiera_large.pt",
     ),
+    "iloncka/culico-net-segm-v1-nano": (
+        "configs/sam2.1/sam2.1_hiera_t.yaml",
+        "sam2.1_hiera_tiny.pt",
+    ),
 }
 
 
